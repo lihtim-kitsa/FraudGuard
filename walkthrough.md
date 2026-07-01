@@ -51,6 +51,3 @@ The services are actively running in the background right now. You can interact 
 
 - **Docker Ready**: We configured `Dockerfile` and `docker-compose.yml`. You can spin this up independently using `docker-compose up --build` at any time.
 - **Interviews**: We documented key system architecture decisions and talking points directly in the [README.md](file:///c:/Users/astik/OneDrive/Desktop/ML%20Project/README.md).
-
-> [!TIP]
-> **Check out your new repository here:** [c:\Users\astik\OneDrive\Desktop\ML Project](file:///c:/Users/astik/OneDrive/Desktop/ML%20Project)
