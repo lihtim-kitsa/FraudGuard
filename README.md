@@ -1,4 +1,4 @@
-# 🛡️ FraudGuard — Real-Time Fraud Detection System
+# FraudGuard — Real-Time Fraud Detection System
 
 An end-to-end machine learning system that scores financial transactions for fraud risk in real time. Features a trained XGBoost/LightGBM model, SHAP explainability, cost-aware decisioning, a FastAPI serving layer, and a live React monitoring dashboard.
 
@@ -10,7 +10,7 @@ An end-to-end machine learning system that scores financial transactions for fra
 
 ---
 
-## 🎯 Problem Framing
+## Problem Framing
 
 Credit card fraud costs the global economy **$32+ billion annually**. The challenge isn't just detecting fraud — it's detecting it **in real time** while balancing two competing business objectives:
 
@@ -23,7 +23,7 @@ Credit card fraud costs the global economy **$32+ billion annually**. The challe
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌──────────────┐     ┌──────────────────────┐     ┌─────────────────┐
@@ -40,7 +40,7 @@ Credit card fraud costs the global economy **$32+ billion annually**. The challe
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.12+
@@ -84,7 +84,7 @@ docker-compose up --build
 
 ---
 
-## 📊 Results
+## Results
 
 | Model | PR-AUC | Precision | Recall | F1 |
 |---|---|---|---|---|
@@ -106,7 +106,7 @@ This typically yields a threshold around **0.20–0.35**, favoring recall over p
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 fraudguard/
@@ -152,7 +152,7 @@ fraudguard/
 
 ---
 
-## 🔑 Key Design Decisions
+## Key Design Decisions
 
 ### 1. Imbalanced Data Handling
 - **Class weighting** (`scale_pos_weight`): Adjusts the loss function to penalize minority class errors more heavily. Simple, no data augmentation artifacts.
@@ -180,7 +180,7 @@ Every prediction comes with a human-readable explanation of *why* it was flagged
 
 ---
 
-## 🖥️ API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -197,7 +197,7 @@ Every prediction comes with a human-readable explanation of *why* it was flagged
 
 ---
 
-## 🧪 Experiment Tracking (MLflow)
+## Experiment Tracking (MLflow)
 
 All training runs are logged to MLflow:
 ```bash
@@ -207,7 +207,7 @@ Navigate to http://localhost:5000 to compare models, view parameters, and review
 
 ---
 
-## 📈 Dashboard Features
+## Dashboard Features
 
 1. **Live Scoring**: Input transaction features → get instant fraud probability with SHAP explanation
 2. **Threshold Tuning**: Drag the slider to see precision/recall/cost tradeoffs in real time
@@ -217,7 +217,7 @@ Navigate to http://localhost:5000 to compare models, view parameters, and review
 
 ---
 
-## 🎤 Interview Talking Points
+## FAQ
 
 1. **"Why PR-AUC over accuracy?"** — With 1.7% fraud rate, accuracy is meaningless. PR-AUC evaluates the model specifically on the minority class.
 2. **"How do you handle imbalance?"** — Compared class weighting vs. SMOTE empirically. Class weighting won — simpler, no synthetic artifacts.
@@ -227,6 +227,6 @@ Navigate to http://localhost:5000 to compare models, view parameters, and review
 
 ---
 
-## 📜 License
+## License
 
 MIT
